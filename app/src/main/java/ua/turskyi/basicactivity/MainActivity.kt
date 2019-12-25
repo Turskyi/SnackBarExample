@@ -10,15 +10,21 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_main.*
 
+/**
+ * @Description
+ * On tap on fab the custom snackbar is showing up.
+ */
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private var mSnackbar: Snackbar? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         super.onCreate(savedInstanceState)
         setSupportActionBar(toolbar)
 
